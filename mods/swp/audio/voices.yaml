@@ -21,6 +21,7 @@ GenericVoice:
 		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
 		Burned: dedman10
 		Zapped: dedman6
+		Move: ackno
 	DisableVariants: Die, Burned, Zapped
 
 VehicleVoice:

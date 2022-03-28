@@ -578,7 +578,7 @@
 		Range: 2c0
 	GrantExternalConditionToCrusher:
 		WarnCrushCondition: crush-attempt
-		WarnCrushDruation: 15
+		WarnCrushDuration: 15
 		OnCrushCondition: crush-succesful
 		OnCrushDuration: 30
 

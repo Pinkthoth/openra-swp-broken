@@ -745,6 +745,7 @@ DOME:
 		LongDesc: Constructs a tower that\nprojects holograms\nof a military unit.
 		Prerequisites: support.france
 		Description: Doppelgängers
+		EffectImage: empty
 	AirstrikePower@stukadive:
 		PauseOnCondition: empdisable || disabled
 		OrderName: StukaDive
@@ -1899,7 +1900,7 @@ AFLD:
 			france: eafld
 			japan: eafld
 	ParatroopersPower@entparatroopers:
-		PauseOnCondition: empdisable || disabled
+		PauseOnCondition: empdisable
 		OrderName: EntParatroopers
 		UnitType: douglas
 		Icon: paratroopers
@@ -1925,7 +1926,7 @@ AFLD:
 		EndChargeSpeechNotification: ReinforcementsReady
 		BeginChargeSpeechNotification: ReinforcementsCharging
 	ParatroopersPower@mitparatroopers:
-		PauseOnCondition: empdisable || disabled
+		PauseOnCondition: empdisable
 		OrderName: MitParatroopers
 		Icon: paratroopers
 		ChargeInterval: 7500
@@ -1950,7 +1951,7 @@ AFLD:
 		EndChargeSpeechNotification: ReinforcementsReady
 		BeginChargeSpeechNotification: ReinforcementsCharging
 	ParatroopersPower@komparatroopers:
-		PauseOnCondition: empdisable || disabled
+		PauseOnCondition: empdisable
 		OrderName: KomParatroopers
 		Icon: paratroopers
 		ChargeInterval: 7500
@@ -2688,6 +2689,7 @@ SRIMP:
 		PauseOnCondition: disabled || empdisable
 		EndChargeSpeechNotification: VeilReady
 		BeginChargeSpeechNotification: VeilCharging
+		EffectImage: empty
 	SupportPowerChargeBar:
 	WithBuildingBib:
 		HasMinibib: true
@@ -2882,7 +2884,6 @@ TRENCH:
 	-WithSpriteBody:
 	-WithMakeAnimation:
 	AttackGarrisoned:
-		PauseOnCondition: build-incomplete
 		Armaments: garrisoned
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853

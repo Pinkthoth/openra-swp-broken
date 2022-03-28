@@ -603,3 +603,27 @@ CHRONOBLIMP.Husk:
 		Image: chronoblimp
 	FallsToEarth:
 		Velocity: 0c40
+
+MI26.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Halo
+	Aircraft:
+		TurnSpeed: 16
+		Speed: 149
+	WithIdleOverlay@ROTOR1AIR:
+		Offset: 0,0,430
+		Sequence: rotor
+	WithIdleOverlay@ROTOR1GROUND:
+		Offset: 0,0,430
+		Sequence: slow-rotor
+	RevealsShroud:
+		MinRange: 6c0
+		Range: 8c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 6c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: mi26

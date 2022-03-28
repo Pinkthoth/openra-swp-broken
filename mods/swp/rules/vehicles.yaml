@@ -212,7 +212,7 @@ ARMCR:
 	Mobile:
 		TurnSpeed: 40
 		Speed: 100
-		PauseOnCondition: notmobile || being-captured
+		PauseOnCondition: being-captured
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 8c0
@@ -348,7 +348,7 @@ PRISMCANNON:
 	Mobile:
 		Speed: 65
 		TurnSpeed: 10
-		PauseOnCondition: notmobile || being-captured
+		PauseOnCondition: being-captured
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 5c0
@@ -577,6 +577,7 @@ TRNSPRT:
 		Type: Light
 	Mobile:
 		Speed: 135
+		PauseOnCondition: notmobile || being-captured
 	RevealsShroud:
 		Range: 4c0
 	Cargo:
@@ -660,7 +661,7 @@ TNKT:
 		Speed: 113
 		TurnSpeed: 10
 		Locomotor: lighttracked
-		PauseOnCondition: notmobile || being-captured
+		PauseOnCondition: being-captured
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 5c0
@@ -974,7 +975,6 @@ JEEP:
 	Inherits: ^Vehicle
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@CARGOPIPS: ^CargoPips
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 50
@@ -996,7 +996,7 @@ JEEP:
 	Mobile:
 		TurnSpeed: 40
 		Speed: 170
-		PauseOnCondition: notmobile || being-captured
+		PauseOnCondition: being-captured
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 8c0
@@ -1014,10 +1014,6 @@ JEEP:
 		PauseOnCondition: empdisable
 	WithMuzzleOverlay:
 	WithSpriteTurret:
-	Cargo:
-		Types: Infantry
-		MaxWeight: 1
-		LoadingCondition: notmobile
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 
@@ -1085,7 +1081,7 @@ IFV:
 		TurnSpeed: 28
 		Speed: 100
 		Locomotor: lighttracked
-		PauseOnCondition: notmobile
+		PauseOnCondition: notmobile || being-captured
 	Health:
 		HP: 28000
 	Repairable:
@@ -1434,7 +1430,7 @@ ARCHER:
 	Mobile:
 		Speed: 71
 		TurnSpeed: 12
-		PauseOnCondition: notmobile || being-captured
+		PauseOnCondition: being-captured
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 5c0
@@ -2000,7 +1996,7 @@ ORDA:
 	Mobile:
 		Speed: 50
 		Locomotor: wheeled
-		PauseOnCondition: notmobile || being-captured
+		PauseOnCondition: being-captured
 	RevealsShroud:
 		MinRange: 4c0
 		Range: 5c0
@@ -2100,7 +2096,6 @@ LOUCHUAN:
 	Turreted:
 		TurnSpeed: 512
 	AttackGarrisoned:
-		RequiresCondition: !build-incomplete
 		Armaments: garrisoned
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853

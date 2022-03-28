@@ -1453,7 +1453,12 @@ CAVALRY:
 	Inherits: ^Vehicle
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	-WithColoredOverlay@EMPDISABLE:
+	-TimedConditionBar@EMPDISABLE:
+	-PowerMultiplier@EMPDISABLE:
+	-WithIdleOverlay@EMPDISABLED:
 	-ExternalCondition@empdisable:
+	-SpeedMultiplier@InstantStop:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 46
@@ -1474,6 +1479,7 @@ CAVALRY:
 	Armor:
 		Type: None
 	Mobile:
+		PauseOnCondition:
 		TurnSpeed: 80
 		Speed: 85
 		Locomotor: foot

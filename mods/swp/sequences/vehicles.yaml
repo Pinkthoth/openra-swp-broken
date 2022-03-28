@@ -1,3 +1,15 @@
+mcv:
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	icon: mcvicon
+
+mcvhusk:
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -1023
+
 4tnk:
 	idle:
 		Facings: 32
