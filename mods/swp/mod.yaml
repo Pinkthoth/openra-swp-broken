@@ -12,7 +12,6 @@ Packages:
 	~^SupportDir|Content/ra/v2/cnc
 	~^SupportDir|Content/ra/v2/movies
 	^EngineDir
-	$ra: ra
 	$swp: swp
 	^EngineDir|mods/common: common
 	~main.mix
@@ -31,19 +30,19 @@ Packages:
 	~expand2.mix
 	~hires1.mix
 	~desert.mix
-	ra|bits
-	ra|bits/desert
-	ra|bits/scripts
+	swp|bits
+	swp|bits/desert
+	swp|bits/scripts
 	swp|uibits
 	swp|bits
 
 MapFolders:
 	swp|maps: System
-	~^SupportDir|maps/ra/release-20210321: User
+	~^SupportDir|maps/swp/release-20210321: User
 
 Rules:
 	swp|rules/misc.yaml
-	ra|rules/ai.yaml
+	swp|rules/ai.yaml
 	swp|rules/player.yaml
 	swp|rules/palettes.yaml
 	swp|rules/defaults.yaml
@@ -51,21 +50,19 @@ Rules:
 	swp|rules/husks.yaml
 	swp|rules/structures.yaml
 	swp|rules/infantry.yaml
-	ra|rules/civilian.yaml
-	ra|rules/decoration.yaml
+	swp|rules/civilian.yaml
+	swp|rules/decoration.yaml
 	swp|rules/aircraft.yaml
-	ra|rules/ships.yaml
+	swp|rules/ships.yaml
 	swp|rules/fakes.yaml
 	swp|rules/world.yaml
 
 Sequences:
-	ra|sequences/ships.yaml
-	ra|sequences/vehicles.yaml
-	ra|sequences/structures.yaml
+	swp|sequences/ships.yaml
 	swp|sequences/infantry.yaml
 	swp|sequences/aircraft.yaml
 	swp|sequences/misc.yaml
-	ra|sequences/decorations.yaml
+	swp|sequences/decorations.yaml
 	swp|sequences/structures.yaml
 	swp|sequences/vehicles.yaml
 
@@ -76,7 +73,7 @@ TileSets:
 	swp|tilesets/desert.yaml
 
 Cursors:
-	ra|cursors.yaml
+	swp|cursors.yaml
 
 Chrome:
 	swp|chrome.yaml
@@ -95,8 +92,8 @@ ChromeLayout:
 	common|chrome/ingame-infoobjectives.yaml
 	common|chrome/ingame-infostats.yaml
 	common|chrome/ingame-menu.yaml
-	ra|chrome/ingame-observer.yaml
-	ra|chrome/ingame-player.yaml
+	swp|chrome/ingame-observer.yaml
+	swp|chrome/ingame-player.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-debuginfo.yaml
@@ -121,7 +118,7 @@ ChromeLayout:
 	common|chrome/connection.yaml
 	common|chrome/replaybrowser.yaml
 	common|chrome/gamesave-browser.yaml
-	ra|chrome/gamesave-loading.yaml
+	swp|chrome/gamesave-loading.yaml
 	common|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
@@ -146,10 +143,10 @@ Notifications:
 	swp|audio/notifications.yaml
 
 Music:
-	ra|audio/music.yaml
+	swp|audio/music.yaml
 
 Translations:
-	ra|languages/english.yaml
+	swp|languages/english.yaml
 
 Hotkeys:
 	common|hotkeys/game.yaml
@@ -157,7 +154,7 @@ Hotkeys:
 	common|hotkeys/production-common.yaml
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
-	ra|hotkeys.yaml
+	swp|hotkeys.yaml
 
 LoadScreen: LogoStripeLoadScreen
 	Image: swp|uibits/loadscreen.png
@@ -205,18 +202,18 @@ Fonts:
 		Size: 24
 		Ascender: 18
 	Title:
-		Font: ra|ZoodRangmah.ttf
+		Font: swp|ZoodRangmah.ttf
 		Size: 48
 		Ascender: 26
 
 Missions:
-	ra|missions.yaml
+	swp|missions.yaml
 
 MapGrid:
 	TileSize: 24,24
 	Type: Rectangular
 
-SupportsMapsFrom: ra
+SupportsMapsFrom: swp
 
 SoundFormats: Aud, Wav
 
