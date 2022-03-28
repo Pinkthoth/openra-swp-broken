@@ -259,7 +259,7 @@ ChainGun.Yak.AG:
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spead: 0c128
+		Spread: 0c128
 		Falloff: 100, 85, 50, 25, 0
 		Damage: 4000
 		Versus:
@@ -302,7 +302,7 @@ ChainGun.Spitfire.AG:
 	MinRange: 1c0
 	Burst: 4
 	Warhead@1Dam: SpreadDamage
-		Spead: 0c128
+		Spread: 0c128
 		Falloff: 100, 85, 50, 25, 0
 		Damage: 2500
 		Versus:
@@ -342,9 +342,6 @@ MesserschmittAutocannon:
 	Report: 20MMGUN2.aud
 	ValidTargets: Ground, GroundActor, Water, WaterActor
 	Projectile: InstantHit
-		Speed: 682
-		Shadow: True
-		ValidTargets: Ground, GroundActor, Water, WaterActor
 	Warhead@1Dam: SpreadDamage
 		Damage: 2500
 		Spread: 0c50

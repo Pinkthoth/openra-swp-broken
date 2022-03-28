@@ -59,7 +59,6 @@ Maverick:
 		Inaccuracy: 316
 		CruiseAltitude: 2c0
 		RangeLimit: 14c410
-		ValidTargets: Ground, GroundActor, Water, WaterActor, AirborneActor, AirborneBomber
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground, GroundActor, Water, WaterActor, Air, AirborneActor, AirborneBomber
 		Damage: 7000
@@ -82,7 +81,7 @@ MaverickAA:
 		Speed: 492
 		Inaccuracy: 128
 		HorizontalRateOfTurn: 100
-		RangeLimit: 7c0
+		RangeLimit: 13c0
 		CloseEnough: 0c600
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
@@ -180,7 +179,6 @@ Nike:
 		HorizontalRateOfTurn: 100
 		RangeLimit: 9c0
 		Speed: 341
-		ValidTargets: AirborneActor, AirborneBomber
 	Warhead@1Dam: SpreadDamage
 		Damage: 5000
 		Versus:
@@ -454,7 +452,7 @@ SturmvogelAA:
 		Speed: 492
 		Inaccuracy: 128
 		HorizontalRateOfTurn: 100
-		RangeLimit: 7c0
+		RangeLimit: 13c0
 		CloseEnough: 0c600
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000

@@ -740,11 +740,10 @@ DOME:
 		OrderName: HoloBase
 		Icon: holoarmyicon
 		ChargeInterval: 7500
-		Name: Doppelgängers
+		Description: Doppelgängers
 		DeploySound: place2.aud
 		LongDesc: Constructs a tower that\nprojects holograms\nof a military unit.
 		Prerequisites: support.france
-		Description: Doppelgängers
 		EffectImage: empty
 	AirstrikePower@stukadive:
 		PauseOnCondition: empdisable || disabled
@@ -2385,7 +2384,6 @@ UPLINK:
 		SatelliteImage: empty
 		SatelliteSequence: dummysputdoor
 	ProduceActorPower@powergps:
-		Name: GPS Satellite
 		Description: GPS Satellite
 		LongDesc: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
 		Icon: gps
@@ -2609,15 +2607,14 @@ RAILGUN:
 		Weapon: RailCannonLoad
 		Turret: primary
 		LocalOffset: 660,0,380
-		ReloadingCondition: railgunreloaded
-		PauseOnCondition: weaponpreparing || weaponattacking || weaponattackingline || railgunprepared
+		PauseOnCondition: weaponpreparing || weaponattacking || railgunprepared
 	Armament@RAILGUNPREPARE:
 		Name: railgunprepare
 		Weapon: RailCannonPrepare
 		Turret: primary
 		LocalOffset: 660,0,380
 		ReloadingCondition: railgunprepared
-		PauseOnCondition: loadingweapon || weaponattacking || weaponattackingline || railgunfired || railgunlinefired
+		PauseOnCondition: loadingweapon || weaponattacking || railgunfired
 	Armament@RAILGUN:
 		Name: railgun
 		Weapon: PrismTower
@@ -2883,6 +2880,11 @@ TRENCH:
 		Type: trench
 	-WithSpriteBody:
 	-WithMakeAnimation:
+	-Capturable:
+	Capturable:
+		Types: building
+	Sellable:
+		RequiresCondition: !being-captured && !being-demolished
 	AttackGarrisoned:
 		Armaments: garrisoned
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128

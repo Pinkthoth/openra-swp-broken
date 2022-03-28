@@ -53,9 +53,9 @@ CRATE:
 		Units: jeep
 		ValidFactions: allies, england, france, germany
 		Prerequisites: techlevel.low
-	GiveUnitCrateAction@1tnk:
+	GiveUnitCrateAction@rtnk:
 		SelectionShares: 6
-		Units: 1tnk
+		Units: rtnk
 		ValidFactions: allies, england, france, germany
 		Prerequisites: techlevel.low
 	GiveUnitCrateAction@apc:
@@ -78,14 +78,14 @@ CRATE:
 		Units: v2rl
 		ValidFactions: soviet, russia, ukraine
 		Prerequisites: techlevel.medium, dome
-	GiveUnitCrateAction@2tnk:
+	GiveUnitCrateAction@ltnk:
 		SelectionShares: 4
-		Units: 2tnk
+		Units: ltnk
 		ValidFactions: allies, england, france, germany
 		Prerequisites: techlevel.medium, fix
-	GiveUnitCrateAction@3tnk:
+	GiveUnitCrateAction@mtnk:
 		SelectionShares: 4
-		Units: 3tnk
+		Units: mtnk
 		ValidFactions: soviet, russia, ukraine
 		Prerequisites: techlevel.medium, fix
 	GiveUnitCrateAction@squadlight:
@@ -569,7 +569,7 @@ HOLOE3:
 	WithInfantryBody:
 		RequiresCondition: !holosupress
 		
-HOLO2TNK:
+HOLOltnk:
 	Inherits: LTNK
 	Tooltip:
 		GenericName: Crusader
@@ -700,10 +700,10 @@ HOLOBASE:
 		SpawnOffset: 0,0
 		RequiresCondition: !build-incomplete
 	FreeActor@11:
-		Actor: holo2tnk
+		Actor: hololtnk
 		SpawnOffset: 0,0
 		RequiresCondition: !build-incomplete
 	FreeActor@12:
-		Actor: holo2tnk
+		Actor: hololtnk
 		SpawnOffset: 0,0
 		RequiresCondition: !build-incomplete

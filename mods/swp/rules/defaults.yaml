@@ -1221,7 +1221,6 @@
 		Image: deadinfantry
 		Scale: 0.6
 	WithColoredOverlay@IDISABLE:
-		Color: 000000B4
 	SpawnActorOnDeath:
 		DeathType: ResurrectionDeath
 		OwnerType: Killer

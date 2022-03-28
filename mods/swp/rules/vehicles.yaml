@@ -1738,6 +1738,7 @@ QTNK:
 		Range: 4c0
 	MadTank:
 		DetonationWeapon: MiniNuke
+		DeployedCondition: deployed
 	WithRangeCircle:
 		Color: FFFF0080
 		Range: 7c0
@@ -1835,7 +1836,6 @@ STHTNK:
 		InitialStanceAI: Defend
 	Targetable:
 	-MustBeDestroyed:
-	-GivesBounty:
 	-GpsDot:
 	
 BIGBERTHA:
@@ -1901,6 +1901,10 @@ BIGBERTHAGUN:
 	-EngineerRepairable:
 	-Sellable:
 	-WithBuildingRepairDecoration:
+	-CaptureManager:
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
 	RevealsShroud@GAPGEN:
 		Range: 5c0
 	Turreted:

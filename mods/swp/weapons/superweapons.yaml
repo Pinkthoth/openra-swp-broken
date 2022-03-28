@@ -252,14 +252,14 @@ ArtilleryBarrageSecondary:
 		AirburstAltitude: 25c0
 		Image: empty
 		LaunchAngle: 0
-	-Warhead@1Dam: SpreadDamage
+	-Warhead@1Dam:
 	Warhead@Cluster1: FireCluster
 		Weapon: ArtilleryBarrageShell
 		Dimensions: 1,1
 		Footprint: x
-	-Warhead@2Smu: LeaveSmudge
-	-Warhead@3Eff: CreateEffect
-	-Warhead@4EffWater: CreateEffect
+	-Warhead@2Smu:
+	-Warhead@3Eff:
+	-Warhead@4EffWater:
 		
 ArtilleryBarrageShell:
 	Inherits: ^Artillery
@@ -267,16 +267,7 @@ ArtilleryBarrageShell:
 	ValidTargets: Ground, Water, Air
 	Projectile: Bullet
 		Image: artshll
-		MinimumLaunchSpeed: 10
-		MaximumLaunchSpeed: 120
 		Inaccuracy: 0c0
-		Speed: 350
-		Acceleration: 0c0
-		MinimumLaunchAngle: -255
-		MaximumLaunchAngle: 255
-		RangeLimit: 10c0
-		AllowSnapping: false
-		VerticalRateOfTurn: 64
 		ContrailLength: 10
 	Warhead@3Eff: CreateEffect
 		Explosions: large_explosion

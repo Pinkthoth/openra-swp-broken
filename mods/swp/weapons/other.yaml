@@ -515,7 +515,6 @@ ResurrectPrepare:
 	BurstDelays: 5
 	ValidTargets: Corpse
 	Projectile: LaserZap
-		Speed: 1c682
 		Duration: 1
 		DamageDuration: 1
 		Width: 0
@@ -546,12 +545,12 @@ PickUpWeapon:
 	Report: buckle.aud
 	TargetActorCenter: true
 	Projectile: InstantHit
-	ValidRelationships: Ally, Enemy, Neutral
 	Warhead@1Dam: TargetDamage
 		Damage: 100000
 		ValidTargets: Corpse
 		InvalidTargets: Ant
 		DamageTypes: ResurrectionDeath
+		ValidRelationships: Ally, Enemy, Neutral
 		
 TSMADTankThump:
 	Inherits: MADTankThump
@@ -780,36 +779,36 @@ StukaSpeedUp3:
 
 HoloM1Carbine:
 	Inherits: M1Carbine
-	Warhead@1Dam:
+	Warhead@1Dam: SpreadDamage
 		Damage: 0
-	-Warhead@2Eff2: CreateEffect
-	-Warhead@3EffWater2: CreateEffect
-	-Warhead@2Eff3: CreateEffect
-	-Warhead@3EffWater3: CreateEffect
+	-Warhead@2Eff2:
+	-Warhead@3EffWater2:
+	-Warhead@2Eff3:
+	-Warhead@3EffWater3:
 		
 Holo90mm:
 	Inherits: 90mm
-	Warhead@1Dam:
+	Warhead@1Dam: SpreadDamage
 		Damage: 0
-	-Warhead@2Smu: LeaveSmudge
-	-Warhead@3Eff: CreateEffect
-	-Warhead@4EffWater: CreateEffect
+	-Warhead@2Smu:
+	-Warhead@3Eff:
+	-Warhead@4EffWater:
 		
 HoloRedEye:
 	Inherits: RedEye
-	Warhead@1Dam:
+	Warhead@1Dam: SpreadDamage
 		Damage: 0
-	-Warhead@2Smu: LeaveSmudge
-	-Warhead@3Eff: CreateEffect
-	-Warhead@4EffWater: CreateEffect
+	-Warhead@2Smu:
+	-Warhead@3Eff:
+	-Warhead@4EffWater:
 		
 HoloDragon:
 	Inherits: Dragon
-	Warhead@1Dam:
+	Warhead@1Dam: SpreadDamage
 		Damage: 0
-	-Warhead@2Smu: LeaveSmudge
-	-Warhead@3Eff: CreateEffect
-	-Warhead@4EffWater: CreateEffect
+	-Warhead@2Smu:
+	-Warhead@3Eff:
+	-Warhead@4EffWater:
 
 SPEMPPulse:
 	Inherits: ^Artillery
@@ -824,7 +823,6 @@ SPEMPPulse:
 		LaunchAngle: 96
 		Image: pulsball
 		Palette: tseffects
-		ValidTargets: Ground, GroundActor, WaterActor, Water
 	Warhead@1Eff: CreateEffect
 		Explosions: pulse_explosion
 		ExplosionPalette: tseffects

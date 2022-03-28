@@ -202,7 +202,6 @@ ARZ:
 		OutsideRangeCursor: heal
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
-		ReloadingCondition: ResurrectionPrepareReloading
 		PauseOnCondition: ResurrectionPrepare-attacking || Resurrection-attacking
 	Armament@ResurrectionPrepare:
 		Name: primary
@@ -211,7 +210,6 @@ ARZ:
 		OutsideRangeCursor: heal
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
-		ReloadingCondition: ResurrectionPrepareReloading
 		PauseOnCondition: Resurrection-attacking || ResurrectionAim-attacking
 	Armament@Resurrect:
 		Name: secondary
@@ -810,7 +808,6 @@ SABOTEUR:
 	WithInfantryBody@PARACHUTE:
 		StandSequences: parachute
 		RequiresCondition: parachute
-		Palette: player-noshadow
 		IsPlayerPalette: true
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1009,7 +1006,6 @@ STRMTRPR:
 	WithInfantryBody@PARACHUTE:
 		StandSequences: parachute
 		RequiresCondition: parachute
-		Palette: player-noshadow
 		IsPlayerPalette: true
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1201,7 +1197,6 @@ E4:
 	WithInfantryBody@PARACHUTE:
 		StandSequences: parachute
 		RequiresCondition: parachute
-		Palette: player-noshadow
 		IsPlayerPalette: true
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1369,7 +1364,6 @@ SHKTRP:
 	WithInfantryBody@PARACHUTE:
 		StandSequences: parachute
 		RequiresCondition: parachute
-		Palette: player-noshadow
 		IsPlayerPalette: true
 	Voiced:
 		VoiceSet: ShokVoice
@@ -1429,7 +1423,6 @@ PNEER:
 		RequiresCondition: !parachute
 	WithInfantryBody@PARACHUTE:
 		RequiresCondition: parachute
-		Palette: player-noshadow
 		IsPlayerPalette: true
 	Minelayer:
 		Mine: SMINE
@@ -1459,6 +1452,13 @@ CAVALRY:
 	-WithIdleOverlay@EMPDISABLED:
 	-ExternalCondition@empdisable:
 	-SpeedMultiplier@InstantStop:
+	-Chronoshiftable:
+	-Targetable@REPAIR:
+	-Repairable:
+	-CaptureManager:
+	-Capturable:
+	-CaptureNotification:
+	-GrantConditionOnDamageState@DAMAGED:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 46
@@ -1478,8 +1478,8 @@ CAVALRY:
 		HP: 12000
 	Armor:
 		Type: None
+	-Mobile:
 	Mobile:
-		PauseOnCondition:
 		TurnSpeed: 80
 		Speed: 85
 		Locomotor: foot
@@ -1521,8 +1521,6 @@ CAVALRY:
 	-WithDamageOverlay:
 	Targetable:
 		TargetTypes: GroundActor, Infantry, Heal
-	RenderSprites:
-		Scale. 0.9
 		
 EMPROCKETEER:
 	Inherits: ^Soldier
@@ -1602,7 +1600,6 @@ NINJA:
 	WithInfantryBody@PARACHUTE:
 		StandSequences: parachute
 		RequiresCondition: parachute
-		Palette: player-noshadow
 		IsPlayerPalette: true
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
