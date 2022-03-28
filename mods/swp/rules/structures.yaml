@@ -129,7 +129,7 @@ SPEN:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
-		Prerequisites: anypower, ~structures.soviet, ~techlevel.low
+		Prerequisites: anypower, ~structures.komintern, ~techlevel.low
 		Description: Produces and repairs\nsubmarines and transports.
 	Targetable:
 		TargetTypes: WaterActor, Structure, C4, DetonateAttack, SpyInfiltrate
@@ -230,7 +230,7 @@ SPEN:
 		Factions: ukraine
 		Prerequisite: ships.ukraine
 	ProvidesPrerequisite@sovietstructure:
-		RequiresPrerequisites: structures.soviet
+		RequiresPrerequisites: structures.komintern
 		Prerequisite: ships.soviet
 	ProvidesPrerequisite@sovietvanillastructure:
 		RequiresPrerequisites: structures.sovietvanilla
@@ -265,7 +265,7 @@ SYRD:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 40
-		Prerequisites: anypower, ~structures.allies, ~techlevel.low
+		Prerequisites: anypower, ~structures.entente, ~techlevel.low
 		Description: Produces and repairs\nships and transports.
 	Valued:
 		Cost: 1000
@@ -348,7 +348,7 @@ SYRD:
 		Factions: germany
 		Prerequisite: ships.germany
 	ProvidesPrerequisite@alliedstructure:
-		RequiresPrerequisites: structures.allies
+		RequiresPrerequisites: structures.entente
 		Prerequisite: ships.allies
 	ProvidesPrerequisite@alliedvanillastructure:
 		RequiresPrerequisites: structures.alliesvanilla
@@ -1734,7 +1734,7 @@ HPAD:
 		Prerequisite: helicopter.japan
 	ProvidesPrerequisite@soviet:
 		Factions: soviet, ukraine, mongolia, russia, china
-		Prerequisite: helicopter.allies
+		Prerequisite: helicopter.soviet
 	ProvidesPrerequisite@ukraine:
 		Factions: ukraine
 		Prerequisite: helicopter.ukraine
@@ -1749,7 +1749,7 @@ HPAD:
 		Prerequisite: helicopter.china
 	ProvidesPrerequisite@tetrarchy:
 		Factions: tetrarchy, turkey, germany, austria, italy
-		Prerequisite: helicopter.allies
+		Prerequisite: helicopter.tetrarchy
 	ProvidesPrerequisite@turkey:
 		Factions: turkey
 		Prerequisite: helicopter.turkey
@@ -2239,93 +2239,6 @@ BARR:
 			japan: erax
 			england: erax
 			france: erax
-
-TENT:
-	Inherits: ^Building
-	Inherits@shape: ^2x2Shape
-	Inherits@PRIMARY: ^PrimaryBuilding
-	Selectable:
-		Bounds: 48,48
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Allied Barracks
-	Building:
-		Footprint: xx xx ==
-		Dimensions: 2,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 60000
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		MinRange: 4c0
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
-	WithBuildingBib:
-	RallyPoint:
-	Exit@1:
-		RequiresCondition: !being-captured || !empdisable
-		SpawnOffset: -42,810,0
-		ExitCell: 1,2
-		ProductionTypes: Soldier, Infantry
-	Exit@2:
-		RequiresCondition: !being-captured || !empdisable
-		SpawnOffset: -725,640,0
-		ExitCell: 0,2
-		ProductionTypes: Soldier, Infantry
-	Production:
-		Produces: Infantry, Soldier
-		PauseOnCondition: being-captured || empdisable
-	GrantExternalConditionToProduced:
-		Condition: produced
-	ProductionBar:
-		ProductionType: Infantry
-	ProvidesPrerequisite@barracks:
-		Prerequisite: barracks
-	ProvidesPrerequisite@allies:
-		Factions: allies, england, france, germany
-		Prerequisite: infantry.allies
-	ProvidesPrerequisite@alliesvanilla:
-		Factions: allies
-		Prerequisite: infantry.alliesvanilla
-	ProvidesPrerequisite@england:
-		Factions: england
-		Prerequisite: infantry.england
-	ProvidesPrerequisite@france:
-		Factions: france
-		Prerequisite: infantry.france
-	ProvidesPrerequisite@germany:
-		Factions: germany
-		Prerequisite: infantry.germany
-	ProvidesPrerequisite@alliedstructure:
-		RequiresPrerequisites: structures.allies
-		Prerequisite: infantry.allies
-	ProvidesPrerequisite@alliedvanillastructure:
-		RequiresPrerequisites: structures.alliesvanilla
-		Prerequisite: infantry.alliesvanilla
-	ProvidesPrerequisite@englishstructure:
-		RequiresPrerequisites: structures.england
-		Prerequisite: infantry.england
-	ProvidesPrerequisite@frenchstructure:
-		RequiresPrerequisites: structures.france
-		Prerequisite: infantry.france
-	ProvidesPrerequisite@germanstructure:
-		RequiresPrerequisites: structures.germany
-		Prerequisite: infantry.germany
-	Power:
-		Amount: -20
-	ProvidesPrerequisite@buildingname:
-	InfiltrateForSupportPower:
-		Proxy: barracks.upgraded
-		Types: SpyInfiltrate
-	Targetable:
-		TargetTypes: GroundActor, C4, DetonateAttack, Structure, SpyInfiltrate
 
 FIX:
 	Inherits: ^Building
@@ -2825,7 +2738,7 @@ SBAG:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 10
-		Prerequisites: fact, ~structures.allies, ~techlevel.low
+		Prerequisites: fact, ~structures.entente, ~techlevel.low
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
 		Cost: 30
@@ -2849,7 +2762,7 @@ FENC:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 20
-		Prerequisites: fact, ~structures.soviet, ~techlevel.low
+		Prerequisites: fact, ~structures.komintern, ~techlevel.low
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Valued:
 		Cost: 30
