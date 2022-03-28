@@ -180,7 +180,7 @@ MIG:
 	ProducibleWithLevel:
 		Prerequisites: aircraft.upgraded
 	Rearmable:
-		RearmActors: afld, mafld
+		RearmActors: afld
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -267,7 +267,7 @@ YAK:
 	Selectable:
 		DecorationBounds: 30,28,0,2
 	Rearmable:
-		RearmActors: afld, mafld
+		RearmActors: afld
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3

@@ -2944,7 +2944,7 @@ TRENCH:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 30
-		Prerequisites: fact, ~buildings.italy, ~techlevel.medium
+		Prerequisites: fact, ~structures.italy, ~techlevel.medium
 		Description: Stop units and blocks enemy fire.
 	Valued:
 		Cost: 400
